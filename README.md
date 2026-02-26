@@ -1,4 +1,4 @@
-# vim-mcfunction
+# vim-mcfunction-highlighter
 A powerful syntax highlighter for mcfunction (the format for Minecraft datapack functions) in vim.
 Instead of simply highlighting a few keywords, it aims to tell you exactly how the game will interpret the commands in order to greatly reduce development time.
 
@@ -10,7 +10,7 @@ To install using [vim-plug](https://github.com/junegunn/vim-plug), add
 ```
 call plug#begin('~/.vim/plugged')
 
-Plug 'rubixninja314/vim-mcfunction'
+Plug 'quellerz/vim-mcfunction-highlighter'
 
 call plug#end()
 ```
