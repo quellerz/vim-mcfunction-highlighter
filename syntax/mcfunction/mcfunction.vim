@@ -1431,9 +1431,9 @@ syn keyword mcFilterKeyword     contained advancements   skipwhite nextgroup=mcF
 syn keyword mcFilterKeyword     contained predicate      skipwhite nextgroup=mcFilterEqPredicate
 
 " ... = ...
-syn match   mcFilterEqGamemode  contained /=/    skipwhite nextgroup=mcGamemode
-syn match   mcFilterEqNBT       contained /=/    skipwhite nextgroup=mcNBTTag
-syn match   mcFilterEqPredicate contained /=/    skipwhite nextgroup=mcNsPredicate
+syn match   mcFilterEqGamemode  contained /=!\?/    skipwhite nextgroup=mcGamemode
+syn match   mcFilterEqNBT       contained /=!\?/    skipwhite nextgroup=mcNBTTag
+syn match   mcFilterEqPredicate contained /=!\?/    skipwhite nextgroup=mcNsPredicate
 syn match   mcFilterEqSort      contained /=/    skipwhite nextgroup=mcFilterSort
 syn match   mcFilterEqScores    contained /=/    skipwhite nextgroup=mcFilterScores
 syn match   mcFilterEqAdvances  contained /=/    skipwhite nextgroup=mcFilterAdvancements
