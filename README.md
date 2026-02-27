@@ -2,7 +2,7 @@
 A powerful syntax highlighter for mcfunction (the format for Minecraft datapack functions) in vim.
 Instead of simply highlighting a few keywords, it aims to tell you exactly how the game will interpret the commands in order to greatly reduce development time.
 
-![vim-mcfuncion sample](https://github.com/rubixninja314/vim-mcfunction/wiki/vim-mcfunction2.png)
+<img width="1920" height="1048" alt="vim-mcfunction-highlighter-test" src="https://github.com/user-attachments/assets/8f60ed33-1ee0-4c0b-b9fd-361ccbd2e759" />
 
 ## Installation
 
