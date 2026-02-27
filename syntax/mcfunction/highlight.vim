@@ -2,24 +2,33 @@ hi def link mcError             Error
 hi def link mcChatMessage       String
 hi def link mcComment           Comment
 
-hi def mcCommand            ctermfg=white ctermbg=Darkgrey        cterm=bold
-hi def mcOp                 ctermfg=grey
-hi def mcSelector           ctermfg=lightgreen           cterm=bold
+hi def link mcCommand            Function
+hi def link mcOp                 Operator
+hi def link mcSelector           Identifier
 
-hi def mcCoordinate         ctermfg=green
-hi def mcCoordinate2        ctermfg=green             cterm=bold
-hi def mcCoordinate3        ctermfg=green
+hi def link mcCoordinate         Special
+hi def link mcCoordinate2        Special
+hi def link mcCoordinate3        Special
 
-hi def mcKeyword                                    cterm=bold
-hi def mcValue              ctermfg=lightblue
-hi def mcKeyId              ctermfg=yellow      cterm=bold
-hi def mcId                 ctermfg=yellow
+hi def link mcKeyword            Keyword
+hi def link mcExecuteKeyword     Special
+hi def link mcValue              Number
+hi def link mcBool               Boolean
+hi def link mcKeyId              Identifier
+hi def link mcId                 Type
 
-hi def mcNBTBracket         ctermfg=grey            cterm=underline guisp=blue
-hi def mcNBTPath            ctermfg=white           cterm=underline guisp=blue
-hi def mcNBTPathDot         ctermfg=grey            cterm=underline guisp=blue
-hi def mcNBTValue           ctermfg=lightblue       cterm=underline guisp=blue
-hi def mcNBTSpace                                   cterm=underline guisp=blue
+hi def link mcFilterKeyword      Type
+hi def link mcFilterValue        String
+hi def link mcTag                Special
+
+hi def link mcBuiltinBlock       String
+hi def link mcBuiltinEntity      String
+
+hi def link mcNBTBracket         Delimiter
+hi def link mcNBTPath            Special
+hi def link mcNBTPathDot         Special
+hi def link mcNBTValue           Special
+hi def link mcNBTSpace           Special
 
 if (exists('g:mcJSONMethod') && g:mcJSONMethod =~ '\v\c<%(n%[one]|p%[lugin])>')
         hi mcJSONText cterm=underline guisp=green
@@ -33,33 +42,5 @@ endif
 "Items/Blocks not in vanilla MC eg 'ghead', 'lucky_block'
 "hi def mcBlock
 
-"Items/Blocks in vanilla MC eg 'apple', 'fire', 'cracked_polished_blackstone_bricks'
-"(pls mojang we need infested_cracked_polished_blackstone_brick_slab)
-"hi def mcBuiltinBlock
-
 "Entities not in vanilla MC eg 'unicorn', 'bullet'
 "hi def mcEntity
-
-"Entities in vanilla MC eg 'wither', 'zombified_piglin'
-"hi def mcBuiltinEntity      ctermfg=
-
-"Boolean values
-"hi def mcBool
-
-" Top level execute keywords
-"execute as @a positioned as @s store entity @s Health byte 1 run kill @s
-"        ^^    ^^^^^^^^^^       ^^^^^                         ^^^
-hi def mcExecuteKeyword ctermfg=white cterm=bold,italic
-
-
-" @e[type=zombie]   grass_block[snowy=true]
-"    ^^^^                       ^^^^^
-"hi def mcFilterKeyword
-
-"Tags
-"hi def mcTag
-
-
-" @e[type=zombie]   grass_block[snowy=true]
-"         ^^^^^^                      ^^^^
-"hi def mcFilterValue
